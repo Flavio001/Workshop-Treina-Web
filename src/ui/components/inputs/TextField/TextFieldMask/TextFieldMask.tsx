@@ -4,7 +4,7 @@ import { TextFieldStyled } from "ui/components/inputs/TextField/TextField.style"
 import {OutlinedTextFieldProps} from '@material-ui/core'
 
 export interface TextFieldMaskProps extends OutlinedTextFieldProps{
-    mask: string
+    mask: string;
 }
 
 const TextFieldMask: React.FC<TextFieldMaskProps> = (props) => {
