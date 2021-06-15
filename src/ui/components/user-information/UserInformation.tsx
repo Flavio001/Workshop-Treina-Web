@@ -24,12 +24,6 @@ const UserInformation: React.FC<UserInformationProps> = (props) => {
         <UserDescription>{props.description}</UserDescription>
       </UserInformationContainer>
 
-      <UserInformationContainer>
-        <AvatarStyled src={props.picture} />
-        <UserName>{props.name}</UserName>
-        <RatingStyled readOnly value={props.rating} />
-        <UserDescription>{props.description}</UserDescription>
-      </UserInformationContainer>
 
       <UserInformationContainer>
         <AvatarStyled>{props.name[0]}</AvatarStyled>
