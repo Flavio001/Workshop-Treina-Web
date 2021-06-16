@@ -46,7 +46,6 @@ export default function Home() {
             onChange={(event) => setCep(event.target.value)}
           />
 
-
           {erro && <Typography color={"error"}>{erro}</Typography>}
 
           <Button
@@ -61,20 +60,20 @@ export default function Home() {
         <ProfissionaisPaper>
           <ProfissionaisContainer>
             <UserInformation
-              name={"Akira Hanashiro"}
-              picture={"https://github.com/hanashiro.png"}
+              name={"Flávio Antonio"}
+              picture={"https://github.com/Flavio001.png"}
               rating={3}
               description={"São Paulo"}
             />
             <UserInformation
-              name={"Akira Hanashiro"}
-              picture={"https://github.com/hanashiro.png"}
+              name={"Flávio Antonio"}
+              picture={"https://github.com/Flavio001.png"}
               rating={3}
               description={"São Paulo"}
             />
             <UserInformation
-              name={"Akira Hanashiro"}
-              picture={"https://github.com/hanashiro.png"}
+              name={"Flávio Antonio"}
+              picture={"https://github.com/Flavio001.png"}
               rating={3}
               description={"São Paulo"}
             />
