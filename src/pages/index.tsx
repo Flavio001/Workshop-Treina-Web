@@ -1,13 +1,31 @@
-import { Button, Typography, Container} from "@material-ui/core";
+import { Button, Typography, Container } from "@material-ui/core";
 import PageTitle from "ui/components/data-display/PageTitle/PageTitle";
 import SafeEnvironment from "ui/components/feedback/SafeEnvironment/SafeEnvironment";
 import { TextFieldStyled } from "ui/components/inputs/TextField/TextField.style";
 import UserInformation from "ui/components/user-information/UserInformation";
 import TextFieldMask from "ui/components/inputs/TextField/TextFieldMask/TextFieldMask";
-import { FormatElementsContainer, ProfissionaisContainer, ProfissionaisPaper } from "@styles/pages/index.style";
+import {
+  FormatElementsContainer,
+  ProfissionaisContainer,
+  ProfissionaisPaper,
+} from "@styles/pages/index.style";
+import useIndex from "data/hooks/pages/useIndex.page";
 
+//Declaração de estados UseState()
 
 export default function Home() {
+  const {
+    cep,
+    setCep,
+    cepValido,
+    buscarProfissionais,
+    erro,
+    diaristas,
+    buscaFeita,
+    carregando,
+    diaristasRestantes,
+  } = useIndex();
+
   return (
     <div>
       <SafeEnvironment />
@@ -20,9 +38,16 @@ export default function Home() {
         <FormatElementsContainer>
           <Typography> Digite o seu CPF: </Typography>
 
-          <TextFieldMask mask={"99.99.99.99"} variant={"outlined"} fullWidth />
+          <TextFieldMask
+            mask={"99.99.99.99"}
+            variant={"outlined"}
+            fullWidth
+            value={cep}
+            onChange={(event) => setCep(event.target.value)}
+          />
 
-          <Typography color={"error"}>CEP Inválido</Typography>
+
+          {erro && <Typography color={"error"}>{erro}</Typography>}
 
           <Button
             variant={"contained"}
